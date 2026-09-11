@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Math &amp; logic · Unicode candidate inventory</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="inventory-report.css">
+  <script src="inventory.js" defer></script>
+  <script src="inventory-report.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="eyebrow"><span class="status-dot"></span> UNICODE <span id="version">17.0.0</span> <span class="divider">/</span> OFFLINE INVENTORY</div>
+    <h1>Math <span class="ampersand">&amp;</span> logic</h1>
+    <p class="intro">Explore the candidate repertoire. Compare Unicode groups, inspect a symbol, and decide what belongs.</p>
+    <div class="summary" id="summary"></div>
+  </header>
+
+  <main>
+    <section class="toolbar" aria-label="Inventory filters">
+      <div class="search-row">
+        <label class="search-label" for="search">Search symbols</label>
+        <input id="search" type="search" placeholder="A symbol, name, alias, or U+2211…" autocomplete="off" spellcheck="false">
+        <button id="reset" class="secondary" type="button">Reset filters</button>
+      </div>
+      <div class="filters">
+        <label>Group by
+          <select id="group-by">
+            <option value="block">Unicode block</option>
+            <option value="subheading">Unicode subheading</option>
+            <option value="kind">Character kind</option>
+            <option value="script">Script</option>
+            <option value="all">All · codepoint order</option>
+          </select>
+        </label>
+        <label>Group <select id="group-filter"><option value="">All groups</option></select></label>
+        <label>Candidate pool
+          <select id="pool">
+            <option value="all">All candidates</option>
+            <option value="math">Math property</option>
+            <option value="additional">Additional candidates</option>
+          </select>
+        </label>
+        <label>Letters
+          <select id="letters">
+            <option value="all">Show all</option>
+            <option value="hide">Hide non-ASCII letters</option>
+            <option value="only">Only non-ASCII letters</option>
+          </select>
+        </label>
+        <label>Script <select id="script"><option value="">All scripts</option></select></label>
+      </div>
+    </section>
+
+    <div class="results-bar">
+      <p id="result-count" role="status">Loading the local inventory…</p>
+      <label class="size-control">Glyph size <input id="glyph-size" type="range" min="24" max="64" value="36" step="4"><output id="size-value" for="glyph-size">36 px</output></label>
+    </div>
+    <div class="workspace">
+      <section id="results" aria-label="Candidate symbols"></section>
+      <aside id="detail" aria-label="Symbol details"></aside>
+    </div>
+    <details class="about">
+      <summary>About this inventory</summary>
+      <p>This is a broad review pool, not a final inclusion list. It includes mathematical characters, printable ASCII, common Greek letters, and nearby blocks of symbols. A block may contain characters with no mathematical use.</p>
+      <p>Subheadings and notes come from NamesList. Character names, properties, block ranges, decompositions, scripts, formal aliases, and standardized variants come from their dedicated Unicode data files. A script value is not a language-independence verdict. Subheading labels are combined for browsing; their individual occurrences and notes remain attached to each character.</p>
+      <p>Glyphs use installed fonts. Combining marks are previewed with a dotted circle; copying returns the actual character without the circle. Invisible characters have a labeled preview.</p>
+      <p><a href="inventory.json" download>Inventory JSON</a> · <a href="inventory-summary.json" download>Summary JSON</a></p>
+      <details><summary>Candidate sources and overlapping counts</summary><div id="source-counts"></div></details>
+      <p class="license">Unicode data © 2025 Unicode, Inc. Source files retain their copyright notices. <a href="https://www.unicode.org/terms_of_use.html">Unicode terms of use</a> (external link).</p>
+    </details>
+  </main>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript>This report needs JavaScript enabled. Its data is also available in inventory.json.</noscript>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "unicodeVersion": "17.0.0",
+  "properties": ["Math"],
+  "blocks": [
+    "Superscripts and Subscripts",
+    "Combining Diacritical Marks for Symbols",
+    "Letterlike Symbols",
+    "Number Forms",
+    "Arrows",
+    "Mathematical Operators",
+    "Miscellaneous Technical",
+    "Geometric Shapes",
+    "Miscellaneous Mathematical Symbols-A",
+    "Supplemental Arrows-A",
+    "Supplemental Arrows-B",
+    "Miscellaneous Mathematical Symbols-B",
+    "Supplemental Mathematical Operators",
+    "Miscellaneous Symbols and Arrows",
+    "Mathematical Alphanumeric Symbols",
+    "Arabic Mathematical Alphabetic Symbols",
+    "Geometric Shapes Extended",
+    "Supplemental Arrows-C"
+  ],
+  "ranges": [
+    {"start": "0020", "end": "007E", "reason": "Printable ASCII"},
+    {"start": "0391", "end": "03A9", "reason": "Greek capitals used in mathematics"},
+    {"start": "03B1", "end": "03C9", "reason": "Greek lowercase letters used in mathematics"}
+  ],
+  "codepoints": [
+    {"codepoint": "00B0", "reason": "Degree sign"},
+    {"codepoint": "00B7", "reason": "Middle dot used for multiplication"},
+    {"codepoint": "2026", "reason": "Horizontal ellipsis"},
+    {"codepoint": "2030", "reason": "Per mille sign"},
+    {"codepoint": "2031", "reason": "Per ten thousand sign"}
+  ]
+}
